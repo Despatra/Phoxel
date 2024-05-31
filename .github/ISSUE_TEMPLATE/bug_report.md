@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Tell me what went wrong
-title: Big Report
+title: Bug Report
 labels: ''
 assignees: ''
 
@@ -9,9 +9,8 @@ assignees: ''
 
 **Describe the bug**
 
-
 **Steps to Reproduce**
-
+*if you can
 
 **Screenshots**
 *If applicable*
@@ -19,7 +18,8 @@ assignees: ''
 **Specifications**
  - Graphics Card: 
  - Minecraft Version:
- - Mod: [Optifine, Iris, Sodium]
+ - Shader Version:
+ - Shader Loader: [Optifine, Iris]
 
 **Additional context**
 *If any*
