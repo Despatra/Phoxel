@@ -3,7 +3,7 @@ name: Bug report
 about: Tell me what went wrong
 title: Bug Report
 labels: ''
-assignees: ''
+assignees: Despatra
 
 ---
 
