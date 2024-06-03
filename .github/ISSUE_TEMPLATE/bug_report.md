@@ -15,7 +15,7 @@ assignees: Despatra
 **Screenshots**
 *If applicable*
 
-**Specifications**
+**Specifications if it has to do with performance or crashes**
  - Graphics Card: 
  - Minecraft Version:
  - Shader Version:
