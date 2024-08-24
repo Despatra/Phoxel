@@ -19,7 +19,8 @@ assignees: Despatra
  - Graphics Card: 
  - Minecraft Version:
  - Shader Version:
- - Shader Loader: [Optifine, Iris]
+ - Shader Loader: [Optifine, Iris, Oculus]
+ - Loader Version: 
 
 **Additional context**
 *If any*
