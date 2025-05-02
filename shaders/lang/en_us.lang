@@ -1,0 +1,274 @@
+# low / no = §2
+# medium / medium-high = §6
+# high = §c
+# extreme = §4
+# dependant = §5
+
+# for about
+# green (§2) emphasis
+# purple (§5) shader values
+# white (§f) normal
+
+# profiles
+# High Res
+profile.LowestH=§6Lowest (High Res)
+profile.LowH=§eLow (High Res)
+profile.MediumH=§9Medium (High Res)
+profile.HighH=§bHigh (High Res)
+profile.UltraH=§5Ultra (High Res)
+# Low Res
+profile.LowestL=§6Lowest (Low Res)
+profile.LowL=§eLow (Low Res)
+profile.MediumL=§9Medium (Low Res)
+profile.HighL=§bHigh (Low Res)
+profile.UltraL=§5Ultra (Low Res)
+
+# About
+screen.About.comment=Useful information on the shader and its settings.
+
+value.HowTo.0=
+option.HowTo=Hover Over A Button
+option.HowTo.comment=The buttons on this page are to help get the best experience for you, and to give helpful information.
+
+value.AboutShader.0=
+option.AboutShader=About
+option.AboutShader.comment=§6Phoxel §fby Despatra. If you have found a bug, check to see if it has been reported on github: §bgithub.com/Despatra/Phoxel§f.
+
+value.GetPerformance.0=
+option.GetPerformance=How to get performance?
+option.GetPerformance.comment=There are a few ways to do this, the §5shader profiles §fhave been set for the best general experience. But if you would rather have some noise or blurring for better §aframerate §fI suggest you turn your profile to §6low §fand turn up §5temporal accumulation §fto your liking.
+
+value.ReduceNoise.0=
+option.ReduceNoise=How do I reduce visual noise?
+option.ReduceNoise.comment=The best bang for your buck right now is setting §5Light Samples§f to §a3 §f. (yes, exactly §a3§f, the shader does some fancy stuff). Other than that §5temporal accumulation §fis good, but will give some blur, but if you can get §ahigh framerates §fby lowering some settings, then the §ablur will be much less noticable§f.
+
+value.ParallaxAbout.0=
+option.ParallaxAbout=Why does the Parallax look bad?
+option.ParallaxAbout.comment=If your parallax occolusion mapping has some weird artifacts increasing §5Parallax Samples §fshould remove them. If you are using §5Binary POM §fthere are some artifacts that come with it that I am still working on fixing. Otherwise you can turn of §5Binary POM§f, It will just look worse in some areas like if you have very deep POM.
+
+value.BinaryPOMAbout.0=
+option.BinaryPOMAbout=What is Binary POM?
+option.BinaryPOMAbout.comment=Binary POM is a technique I made which uses a binary search to offset POM rather than a linear one. This method is faster and yields cleaner results most of the time but can lead to some visual artifacts due to its nature.
+
+value.RenderModeAbout.0=
+option.RenderModeAbout=What is §5Render Mode§f?
+option.RenderModeAbout.comment=§5Render Mode §fis a setting I added for the sole purpose of taking screenshots. It just turns up the already existing settings for a more accurate image and allows higher TA.
+
+# variables
+# Render Settings
+screen.Render_Settings=Render Settings
+
+option.RenderMode=Perform Render
+option.RenderMode.comment=Sets up the shader to do expensive path tracing, used for screenshots and showcase. §4This will likely max out your GPU, I suggest you have some kind of GPU monitoring software just in case if you plan on having this on!.
+
+option.RenderFrames=Frame Count
+option.RenderFrames.comment=How many frames are used to build the output image.
+value.RenderFrames.10000=Infinite
+
+option.RenderDelay=Delay
+option.RenderDelay.comment=How much time in seconds is waited before starting the render.
+
+option.RenderFrames=Max TA
+option.RenderFrames.comment=The maximum number of frames collected for Temporal Accumulation.
+
+option.RenderBounces=Bounces
+option.RenderBounces.comment=Unlike §5Max Bounces§f this will do every bounce for accuracy.
+
+option.RenderMaxDist=Max Intersection Distance
+option.RenderMaxDist.comment=Maximum distance that a ray will travel before declaring no hit.
+
+# Path Tracing Settings
+screen.Path_Tracer=Path Tracer
+screen.Path_Tracer.comment=Affects how path tracing is handled. These settings only affect the quality of path tracing and do change how it is done. Biggest performance impact.
+
+option.TemporalAccumulation=Temporal Accumulation
+option.TemporalAccumulation.comment=How many previously rendered frames are blended to clean up the image. §2No performance impact.
+value.TemporalAccumulation.1=§cOff
+
+option.Bounces=Max Bounces
+option.Bounces.comment=The maximum number of times a ray bounces before stopping. Mostly noticable on reflections, refractions, and Global Illumination. §6Medium performance impact.
+
+option.TraceDist=Max Intersection Distance
+option.TraceDist.comment=Maximum distance that a ray will travel before declaring no hit. §cHigh performance impact.
+
+option.Samples.comment=How many rays are shot from the camera per frame. Leads to better images faster. §4Extreme performance impact!
+
+option.LightSamples=Light Samples
+option.LightSamples.comment=How many light checks are performed per intersection. §6Medium-High performance impact.
+
+option.FogSamples=Fog Samples
+option.FogSamples.comment=How many samples are taken for fog. §6Medium-High performance impact.
+
+option.FogStrength=Fog Strength
+option.FogStrength.comment=How strong the fog effect is. §2No performance impact.
+value.FogStrength.0.0=§cOff
+value.FogStrength.0.05=1/4x
+value.FogStrength.0.1=1/2x
+value.FogStrength.0.2=Normal
+value.FogStrength.0.4=2x
+value.FogStrength.0.6=3x
+value.FogStrength.0.8=4x
+
+# Voxelization
+option.VoxelBufferSize=Voxelization Distance
+option.VoxelBufferSize.comment=The distance that will be voxelized, farther distances increases RAM usage. §2Low performance impact.
+value.VoxelBufferSize.512=2 chunks 
+value.VoxelBufferSize.1449=4 chunks §5[0.4 GB]
+value.VoxelBufferSize.2661=6 chunks §5[0.5 GB]
+value.VoxelBufferSize.4096=8 chunks §5[0.7 GB]
+value.VoxelBufferSize.5725=10 chunks §5[1.1 GB]
+value.VoxelBufferSize.7525=12 chunks §5[1.6 GB]
+value.VoxelBufferSize.9483=14 chunks §5[2.3 GB]
+value.VoxelBufferSize.11585=16 chunks §5[3.3 GB]
+
+option.LightBufferSize=Light Voxel Distance
+option.LightBufferSize.comment=How far away lights are voxelized for tracing. §2Minimal performance impact.
+value.LightBufferSize.182=1 chunk
+value.LightBufferSize.512=2 chunks
+value.LightBufferSize.941=3 chunks
+value.LightBufferSize.1449=4 chunks
+
+# Lighting
+screen.Lighting.comment=Affects how GI, lights, and reflections are handled during path tracing.
+
+option.PixelLock=Light Pixel Locking
+option.PixelLock.comment=Adjusts how rays are positioned, allows for a more stylistic feel. §2No performance impact.
+value.PixelLock.0=Off
+value.PixelLock.8=8x8
+value.PixelLock.16=16x16
+value.PixelLock.32=32x32
+value.PixelLock.64=64x64
+value.PixelLock.128=128x128
+
+option.ReflectLock=Reflection Pixel Locking
+option.ReflectLock.comment=If reflections and GI should be affected by pixel locking. §2No performance impact.
+
+option.GiStrength=Global Illumination Strength
+option.GiStrength.comment=How bright indirect lighting is rendered. Values that are greater than 1 will lead to unnatural looking lighting. §2No performance impact. 
+
+option.LightSize=Light Size
+option.LightSize.comment=How big the lights are (this is multiplied). §2No performance impact.
+
+option.BlockLightBrightness=Block Emission Strength
+option.BlockLightBrightness.comment=How bright block lights are. §2No performance impact.
+
+# Atmosphere
+screen.Atmosphere.comment=Changes how the sky, sun, and moon are rendered and used in path tracing.
+
+option.SunLightBrightness=Sun Brightness
+
+option.MoonLightBrightness=Moon Brightness
+
+option.ScatterCount=Light Scatter Samples
+option.ScatterCount.comment=How many scattering points are sampled. §2Low-Medium performance impact.
+
+option.OpticalDepthSamples=Density Samples
+option.OpticalDepthSamples.comment=How many samples are used to get the density (more accurately optical depth) at a point. §2Low-Medium performance impact.
+
+option.AuroraSamples=Aurora Samples
+option.AuroraSamples.comment=How many samples are used for the Aurora. §6Medium-High performance impact.
+
+# Materials
+screen.Materials.comment=Affects the way textures are rendered and how light interacts with objects.
+
+option.MaterialMode=PBR Support
+option.MaterialMode.comment=Which type of PBR format to use for textures. §2Low performance impact.
+value.MaterialMode.0=§2Integrated PBR
+value.MaterialMode.1=§5Lab PBR
+value.MaterialMode.2=§5Sues PBR
+
+option.IntegratedNormalsScale=Auto-generated Normal Scale
+value.IntegratedNormalsScale.2.0=1/2x
+value.IntegratedNormalsScale.1.0=1x
+value.IntegratedNormalsScale.0.5=2x
+value.IntegratedNormalsScale.0.3333=3x
+value.IntegratedNormalsScale.0.25=4x
+value.IntegratedNormalsScale.0.2=5x
+value.IntegratedNormalsScale.0.1666=6x
+value.IntegratedNormalsScale.0.1428=7x
+value.IntegratedNormalsScale.0.125=8x
+
+option.NormalMapStrength=Normal Map Strength
+option.NormalMapStrength.comment=How bumpy normal maps are. §2No performance impact.
+value.NormalMapStrength.0.0=§cOff
+
+option.ParallaxRenderDist=Parallax Render Distance
+option.ParallaxRenderDist.comment=How far away (in blocks) POM is rendered. §2Low performance impact.
+
+option.POM=Parallax Occolusion Mapping
+
+option.ParallaxSamples=Parallax Samples
+option.ParallaxSamples.comment=The higher the samples the more accurate. §6Medium performance impact.
+value.ParallaxSamples.0=§cOff
+
+option.ParallaxDepth=Parallax Depth
+option.ParallaxDepth.comment=How deep parallax appears. §2No performance impact.
+
+# Camera
+screen.Camera.comment=Post processing and color control.
+
+option.DOF=Depth of Field
+option.DOF.comment=Makes things close and far away from your current viewing point blurry. §2Minimal performance impact.
+
+option.DOFStrength=Depth of Field Strength
+option.DOFStrength.comment=How strong the Depth of Field blur affect is. §2No performance impact.
+
+option.AA=Anti-Aliasing
+option.AA.comment=Anti-Aliasing. §2Minimal performance impact.
+value.AA.0=Off
+value.AA.1=FXAA
+value.AA.2=TAA
+
+option.DenoiserFactor=Denoising
+option.DenoiserFactor.comment=How strongly the denoiser affects the output image. §2No performance impact.
+value.DenoiserFactor.0.0=§cOff
+
+option.RenderScale=Render Scale
+option.RenderScale.comment=This divides the render resolution and then upscales to increase performance. §cHigh performance impact.
+
+option.UpscalingType=Upscale
+option.UpscalingType.comment=How the path traced image is upscaled to fit the size of the original image. §2No §f-§5(put Most expensive here) performance impact.
+value.UpscalingType.0=None
+value.UpscalingType.1=Linear
+value.UpscalingType.2=Cubic
+
+option.DenoisingType=Denoiser
+option.DenoisingType.comment=What denoising method is used. §2No §f-§5(put Most expensive here) performance impact.
+value.DenoisingType.0=None
+
+# Since we're taking of each of the two edges we have to do the sqrt(%)
+value.RenderScale.1.0=100%
+value.RenderScale.0.935=87.5%
+value.RenderScale.0.866=75%
+value.RenderScale.0.791=62.5%
+value.RenderScale.0.707=50%
+value.RenderScale.0.612=37.5%
+value.RenderScale.0.5=25%
+value.RenderScale.0.354=12.5%
+
+option.Panorama=Panorama Mode
+option.Panorama.comment=Enables Wide view. This is not a serious setting and is used for debug mostly.
+
+option.PanoramaScale=Panorama Scale
+option.PanoramaScale.comment=How much of the full 360* angle is shown, 0.0 is normal view while 1.0 is full.
+value.PanoramaScale.0.0=Normal
+value.PanoramaScale.0.05=5%
+value.PanoramaScale.0.1=10%
+value.PanoramaScale.0.15=15%
+value.PanoramaScale.0.2=20%
+value.PanoramaScale.0.25=25%
+value.PanoramaScale.0.3=30%
+value.PanoramaScale.0.35=35%
+value.PanoramaScale.0.4=40%
+value.PanoramaScale.0.45=45%
+value.PanoramaScale.0.5=50%
+value.PanoramaScale.0.55=55%
+value.PanoramaScale.0.6=60%
+value.PanoramaScale.0.65=65%
+value.PanoramaScale.0.7=70%
+value.PanoramaScale.0.75=75%
+value.PanoramaScale.0.8=80%
+value.PanoramaScale.0.85=85%
+value.PanoramaScale.0.9=90%
+value.PanoramaScale.0.95=95%
+value.PanoramaScale.1.0=Full 360
