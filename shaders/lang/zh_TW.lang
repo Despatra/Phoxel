@@ -1,0 +1,274 @@
+# low / no = §2
+# medium / medium-high = §6
+# high = §c
+# extreme = §4
+# dependant = §5
+
+# for about
+# green (§2) emphasis
+# purple (§5) shader values
+# white (§f) normal
+
+# profiles
+# High Res
+profile.LowestH=§6最低 (高解析度)
+profile.LowH=§e低 (高解析度)
+profile.MediumH=§9中 (高解析度)
+profile.HighH=§b高 (高解析度)
+profile.UltraH=§5超高 (高解析度)
+# Low Res
+profile.LowestL=§6最低 (低解析度)
+profile.LowL=§e低 (低解析度)
+profile.MediumL=§9中 (低解析度)
+profile.HighL=§b高 (低解析度)
+profile.UltraL=§5超高 (低解析度)
+
+# About
+screen.About.comment=關於著色器及其設定的實用資訊。
+
+value.HowTo.0=
+option.HowTo=懸停在按鈕上
+option.HowTo.comment=此頁面上的按鈕旨在幫助您獲得最佳體驗，並提供有用的資訊。
+
+value.AboutShader.0=
+option.AboutShader=關於
+option.AboutShader.comment=§6Phoxel §fby Despatra。如果您發現錯誤，請檢查 github 上是否已回報：§bgithub.com/Despatra/Phoxel§f。
+
+value.GetPerformance.0=
+option.GetPerformance=如何獲得效能？
+option.GetPerformance.comment=有幾種方法可以做到這一點，§5著色器設定檔§f已設定為最佳的整體體驗。但如果您寧願有一些雜訊或模糊以獲得更好的§aframerate§f，我建議您將設定檔調低至§6低§f，並將§5時間累積§f調高至您喜歡的程度。
+
+value.ReduceNoise.0=
+option.ReduceNoise=如何減少視覺雜訊？
+option.ReduceNoise.comment=目前最划算的方法是將§5光線採樣§f設定為§a3§f。（是的，正是§a3§f，著色器會進行一些巧妙的處理）。除此之外，§5時間累積§f也不錯，但會產生一些模糊，但如果您可以透過降低某些設定來獲得§a高幀率§f，那麼§a模糊將不太明顯§f。
+
+value.ParallaxAbout.0=
+option.ParallaxAbout=為什麼視差看起來很糟？
+option.ParallaxAbout.comment=如果您的視差遮蔽貼圖有一些奇怪的瑕疵，增加§5視差採樣§f應該可以消除它們。如果您使用的是§5二元 POM§f，則存在一些與之相關的瑕疵，我仍在努力修復。否則您可以關閉§5二元 POM§f，只是在某些區域（例如深度非常深的 POM）看起來會更糟。
+
+value.BinaryPOMAbout.0=
+option.BinaryPOMAbout=什麼是二元 POM？
+option.BinaryPOMAbout.comment=二元 POM 是我創建的一種技術，它使用二分搜尋來偏移 POM，而不是線性搜尋。這種方法更快，大多數時候會產生更清晰的結果，但由於其性質，可能會導致一些視覺瑕疵。
+
+value.RenderModeAbout.0=
+option.RenderModeAbout=什麼是 §5渲染模式§f？
+option.RenderModeAbout.comment=§5渲染模式§f是我專門為了截圖而新增的設定。它只是調高了現有的設定以獲得更精確的圖像，並允許更高的 TA。
+
+# variables
+# Render Settings
+screen.Render_Settings=渲染設定
+
+option.RenderMode=執行渲染
+option.RenderMode.comment=設定著色器以執行昂貴的路徑追蹤，用於螢幕截圖和展示。§4這可能會使您的 GPU 使用率達到最高，如果您打算開啟此功能，我建議您使用某種 GPU 監控軟體以防萬一！
+
+option.RenderFrames=幀數
+option.RenderFrames.comment=用於建立輸出圖像的幀數。
+value.RenderFrames.10000=無限
+
+option.RenderDelay=延遲
+option.RenderDelay.comment=開始渲染前等待的時間（以秒為單位）。
+
+option.RenderFrames=最大 TA
+option.RenderFrames.comment=時間累積收集的最大幀數。
+
+option.RenderBounces=反彈次數
+option.RenderBounces.comment=與 §5最大反彈次數§f 不同，這將執行每次反彈以確保準確性。
+
+option.RenderMaxDist=最大相交距離
+option.RenderMaxDist.comment=光線在宣告未擊中之前將行進的最大距離。
+
+# Path Tracing Settings
+screen.Path_Tracer=路徑追蹤器
+screen.Path_Tracer.comment=影響路徑追蹤的處理方式。這些設定僅影響路徑追蹤的品質，不會改變其執行方式。效能影響最大。
+
+option.TemporalAccumulation=時間累積
+option.TemporalAccumulation.comment=混合多少先前渲染的幀以清理圖像。§2無效能影響。
+value.TemporalAccumulation.1=§c關閉
+
+option.Bounces=最大反彈次數
+option.Bounces.comment=光線在停止前反彈的最大次數。在反射、折射和全域照明上最為明顯。§6中等效能影響。
+
+option.TraceDist=最大相交距離
+option.TraceDist.comment=光線在宣告未擊中之前將行進的最大距離。§c高效能影響。
+
+option.Samples.comment=每幀從相機發射多少光線。更快地產生更好的圖像。§4極高效能影響！
+
+option.LightSamples=光線採樣
+option.LightSamples.comment=每次相交執行多少光線檢查。§6中高等效能影響。
+
+option.FogSamples=霧採樣
+option.FogSamples.comment=霧採樣的次數。§6中高等效能影響。
+
+option.FogStrength=霧強度
+option.FogStrength.comment=霧效果的強度。§2無效能影響。
+value.FogStrength.0.0=§c關閉
+value.FogStrength.0.05=1/4x
+value.FogStrength.0.1=1/2x
+value.FogStrength.0.2=正常
+value.FogStrength.0.4=2x
+value.FogStrength.0.6=3x
+value.FogStrength.0.8=4x
+
+# Voxelization
+option.VoxelBufferSize=體素化距離
+option.VoxelBufferSize.comment=將被體素化的距離，更遠的距離會增加 RAM 使用量。§2低效能影響。
+value.VoxelBufferSize.512=2 個區塊
+value.VoxelBufferSize.1449=4 個區塊 §5[0.4 GB]
+value.VoxelBufferSize.2661=6 個區塊 §5[0.5 GB]
+value.VoxelBufferSize.4096=8 個區塊 §5[0.7 GB]
+value.VoxelBufferSize.5725=10 個區塊 §5[1.1 GB]
+value.VoxelBufferSize.7525=12 個區塊 §5[1.6 GB]
+value.VoxelBufferSize.9483=14 個區塊 §5[2.3 GB]
+value.VoxelBufferSize.11585=16 個區塊 §5[3.3 GB]
+
+option.LightBufferSize=光線體素距離
+option.LightBufferSize.comment=光線被體素化以進行追蹤的距離。§2極低效能影響。
+value.LightBufferSize.182=1 個區塊
+value.LightBufferSize.512=2 個區塊
+value.LightBufferSize.941=3 個區塊
+value.LightBufferSize.1449=4 個區塊
+
+# Lighting
+screen.Lighting.comment=影響路徑追蹤期間 GI、光線和反射的處理方式。
+
+option.PixelLock=光線像素鎖定
+option.PixelLock.comment=調整光線的定位方式，允許更具風格化的感覺。§2無效能影響。
+value.PixelLock.0=關閉
+value.PixelLock.8=8x8
+value.PixelLock.16=16x16
+value.PixelLock.32=32x32
+value.PixelLock.64=64x64
+value.PixelLock.128=128x128
+
+option.ReflectLock=反射像素鎖定
+option.ReflectLock.comment=反射和 GI 是否應受像素鎖定的影響。§2無效能影響。
+
+option.GiStrength=全域照明強度
+option.GiStrength.comment=間接照明的渲染亮度。大於 1 的值會導致不自然的照明效果。§2無效能影響。
+
+option.LightSize=光線大小
+option.LightSize.comment=光線的大小（此值會被乘）。§2無效能影響。
+
+option.BlockLightBrightness=方塊發光強度
+option.BlockLightBrightness.comment=方塊光源的亮度。§2無效能影響。
+
+# Atmosphere
+screen.Atmosphere.comment=改變天空、太陽和月亮的渲染方式以及在路徑追蹤中的使用方式。
+
+option.SunLightBrightness=太陽亮度
+
+option.MoonLightBrightness=月亮亮度
+
+option.ScatterCount=光線散射採樣
+option.ScatterCount.comment=採樣多少散射點。§2低至中等效能影響。
+
+option.OpticalDepthSamples=密度採樣
+option.OpticalDepthSamples.comment=用於獲取某一點密度（更準確地說是光學深度）的採樣次數。§2低至中等效能影響。
+
+option.AuroraSamples=極光採樣
+option.AuroraSamples.comment=用於極光的採樣次數。§6中高等效能影響。
+
+# Materials
+screen.Materials.comment=影響紋理的渲染方式以及光線與物體的交互方式。
+
+option.MaterialMode=PBR 支援
+option.MaterialMode.comment=紋理使用的 PBR 格式類型。§2低效能影響。
+value.MaterialMode.0=§2整合式 PBR
+value.MaterialMode.1=§5Lab PBR
+value.MaterialMode.2=§5Sues PBR
+
+option.IntegratedNormalsScale=自動生成法線縮放
+value.IntegratedNormalsScale.2.0=1/2x
+value.IntegratedNormalsScale.1.0=1x
+value.IntegratedNormalsScale.0.5=2x
+value.IntegratedNormalsScale.0.3333=3x
+value.IntegratedNormalsScale.0.25=4x
+value.IntegratedNormalsScale.0.2=5x
+value.IntegratedNormalsScale.0.1666=6x
+value.IntegratedNormalsScale.0.1428=7x
+value.IntegratedNormalsScale.0.125=8x
+
+option.NormalMapStrength=法線貼圖強度
+option.NormalMapStrength.comment=法線貼圖的凹凸程度。§2無效能影響。
+value.NormalMapStrength.0.0=§c關閉
+
+option.ParallaxRenderDist=視差渲染距離
+option.ParallaxRenderDist.comment=POM 的渲染距離（以方塊為單位）。§2低效能影響。
+
+option.POM=視差遮蔽貼圖
+
+option.ParallaxSamples=視差採樣
+option.ParallaxSamples.comment=採樣越高，越精確。§6中等效能影響。
+value.ParallaxSamples.0=§c關閉
+
+option.ParallaxDepth=視差深度
+option.ParallaxDepth.comment=視差的深度。§2無效能影響。
+
+# Camera
+screen.Camera.comment=後處理和顏色控制。
+
+option.DOF=景深
+option.DOF.comment=使您目前視點附近和遠處的物體模糊。§2極低效能影響。
+
+option.DOFStrength=景深強度
+option.DOFStrength.comment=景深模糊效果的強度。§2無效能影響。
+
+option.AA=反鋸齒
+option.AA.comment=反鋸齒。§2極低效能影響。
+value.AA.0=關閉
+value.AA.1=FXAA
+value.AA.2=TAA
+
+option.DenoiserFactor=降噪
+option.DenoiserFactor.comment=降噪器對輸出圖像的影響程度。§2無效能影響。
+value.DenoiserFactor.0.0=§c關閉
+
+option.RenderScale=渲染縮放
+option.RenderScale.comment=這會降低渲染解析度，然後再放大以提高效能。§c高效能影響。
+
+option.UpscalingType=放大
+option.UpscalingType.comment=路徑追蹤圖像如何放大以適應原始圖像的大小。§2無 §f-§5（在此處放置最嚴重的）效能影響。
+value.UpscalingType.0=無
+value.UpscalingType.1=線性
+value.UpscalingType.2=立方
+
+option.DenoisingType=降噪器
+option.DenoisingType.comment=使用的降噪方法。§2無 §f-§5（在此處放置最昂貴的）效能影響。
+value.DenoisingType.0=無
+
+# Since we're taking of each of the two edges we have to do the sqrt(%)
+value.RenderScale.1.0=100%
+value.RenderScale.0.935=87.5%
+value.RenderScale.0.866=75%
+value.RenderScale.0.791=62.5%
+value.RenderScale.0.707=50%
+value.RenderScale.0.612=37.5%
+value.RenderScale.0.5=25%
+value.RenderScale.0.354=12.5%
+
+option.Panorama=全景模式
+option.Panorama.comment=啟用廣角檢視。這不是一個嚴肅的設定，主要用於偵錯。
+
+option.PanoramaScale=全景縮放
+option.PanoramaScale.comment=顯示完整 360 度角的多少，0.0 為正常視圖，1.0 為完整視圖。
+value.PanoramaScale.0.0=正常
+value.PanoramaScale.0.05=5%
+value.PanoramaScale.0.1=10%
+value.PanoramaScale.0.15=15%
+value.PanoramaScale.0.2=20%
+value.PanoramaScale.0.25=25%
+value.PanoramaScale.0.3=30%
+value.PanoramaScale.0.35=35%
+value.PanoramaScale.0.4=40%
+value.PanoramaScale.0.45=45%
+value.PanoramaScale.0.5=50%
+value.PanoramaScale.0.55=55%
+value.PanoramaScale.0.6=60%
+value.PanoramaScale.0.65=65%
+value.PanoramaScale.0.7=70%
+value.PanoramaScale.0.75=75%
+value.PanoramaScale.0.8=80%
+value.PanoramaScale.0.85=85%
+value.PanoramaScale.0.9=90%
+value.PanoramaScale.0.95=95%
+value.PanoramaScale.1.0=完整 360
