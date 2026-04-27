@@ -10,10 +10,7 @@ assignees: Despatra
 **Describe the bug**
 
 **Steps to Reproduce**
-*if you can
-
-**Screenshots**
-*If applicable*
+- if you can
 
 **Specifications if it has to do with performance or crashes**
  - Graphics Card: 
@@ -23,4 +20,5 @@ assignees: Despatra
  - Loader Version: 
 
 **Additional context**
-*If any*
+- If any
+- Please provide screenshots if you can
