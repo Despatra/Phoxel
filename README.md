@@ -13,8 +13,7 @@ Phoxel Lite is a derivative of Phoxel PT, designed to give the best Phoxel can o
 ## Extra Info
 See events, ask questions, and do more in the [Discord](https://discord.com/invite/GSF9D3Q2T5)
 
-## Most Recent Update
-### March 8th, 2026
+### Most Recent Update
 Phoxel is back, but there are changes to how things will work:
 1. I will no longer be releasing Beta versions, instead all projects will now only include releases and patches
 2. All full releases will receive patches to make sure they work with the most recent version of Minecraft
