@@ -1,0 +1,3 @@
+If you're wondering why any color is SRGBToLinear([Color]) it's so that any colors we want to directly preserve (like textures or game colors)
+stay the same after having gamma applied after 
+

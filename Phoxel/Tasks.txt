@@ -1,0 +1,32 @@
+Things to correct / update
+
+---- Utility ----
+- Common -
+  - Add SunPathRotation as a shader setting
+
+- PBR -
+  - Make POM physically accurate / real
+  - Make pixel edges of POM have edge normals
+    * or *
+  - Make pixel surfaces bend based on normal map
+  - Make Normalmap strength dependant of the parallax depth, even if not on (since if we imagine it 3D that would be physically accurate)
+  - Re-add Integrated PBR by making custom textures and writing to them depending on mode
+
+- Raytracing -
+  - Correct texture locked lighting (originally called pixel locked)
+  - Sample lightning bolts
+  - Max distances stuffs
+    - blend distances, like a slightly rough should use the specular more than the rough distance
+  - Start by multiplying random samples by the BRDF until you can get derived importance sampled functions
+  - Make DOF an actual affect by using a focal length in camera settings
+  - Ignore light coloring (PixColor += Light) if not a specular path
+  -? Fix celestial bodies not rendering
+
+---- Composite ----
+- Composite1.fsh -
+  -? Fix Render
+  - Cloud Shadows (Part of volumes in reflections)
+  - Correct SSS for volumes (? probably going to be difficult)
+
+- Composite3.fsh -
+  - Anti-Aliasing

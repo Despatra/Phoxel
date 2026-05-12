@@ -1,0 +1,232 @@
+#-- Expense --#
+# Low (Green)           : §2
+# Medium (Orange)       : §6
+# High (Red)            : §c
+# Extreme (Dark Red)    : §4
+# Dependant (Purple)    : §5
+
+#-- Colors --#
+# Black                 : §0
+# Blue                  : §1
+# Green (Emphasis)      : §2
+# Cyan                  : §3
+# Dark Red              : §4
+# Purple (Variables)    : §5
+# Orange                : §6
+# Gray                  : §7
+# Dark Gray             : §8
+# Light Blue            : §9
+# Lime                  : §a
+# Aqua                  : §b
+# Red (Warnings)        : §c
+# Magenta               : §d
+# Yellow                : §e
+# white (normal)        : §f
+
+#-- Formatting --#
+# Bold                  : §l
+# Italic                : §o
+# Reset                 : §r
+
+#-- profiles --#
+
+#-- About --#
+screen.About.comment = Useful information on the shader and its settings
+
+value.HowTo.0 =
+option.HowTo = Hover over a button
+option.HowTo.comment = The buttons on this page are to help get the best experience for you, and to give helpful information
+
+value.AboutShader.0 =
+option.AboutShader = About
+option.AboutShader.comment = §6Phoxel§f by Despatra. §oHeavily§r buggy and lacking, more a proof of concept I want to make a proper shader in the future
+
+#-- Template Junk --#
+screen.screen = 
+screen.screen.comment = 
+option.option = 
+option.option.comment = 
+value.option.value =
+prefix.option = 
+suffix.option = 
+
+#-- Pathtracing --#
+screen.Pathtracing.comment = Settings that affect the rendering directly
+
+screen.Pathtracing_TestDists = Intersection Distances
+screen.Pathtracing_TestDists.comment = The maximum distance each type of ray is allowed to travel before declaring no hit
+
+option.Pathtracing_Bounces = Max Bounces
+option.Pathtracing_Bounces.comment = The maximum number of times a path can bounce around the scene before stopping
+
+    #- Test Distances -#
+    option.Pathtracing_TestDists_Shadow = Shadow
+    option.Pathtracing_TestDists_Shadow.comment = Shadow rays are sent at each intersection towards a light source. §8Number of rays are determined by §5Light Samples
+    suffix.Pathtracing_TestDists_Shadow = m
+
+    option.Pathtracing_TestDists_Rough = Rough
+    option.Pathtracing_TestDists_Rough.comment = Rough rays are reflected from rough surfaces
+    suffix.Pathtracing_TestDists_Rough = m
+
+    option.Pathtracing_TestDists_Specular = Specular
+    option.Pathtracing_TestDists_Specular.comment = Specular rays are reflected from smooth surfaces
+    suffix.Pathtracing_TestDists_Specular = m
+
+option.Pathtracing_LightSamples = Light Samples
+option.Pathtracing_LightSamples.comment = How many times to sample light sources directly at each intersection. §8Only includes the Sun, Moon, and End flash as of right now
+
+option.Pathtracing_VolumeSamples = Volume Samples
+option.Pathtracing_VolumeSamples.comment = How many points will be tested for incoming light when we intersect a volume. §8Volumes include atmosphere, water, and lava
+
+#-- Post Processing --#
+screen.Post_Processing = Post Processing
+screen.Post_Processing.comment = Settings that affect the rendered image
+
+screen.Post_Denoising = Denoising
+
+screen.Post_DOF = Depth of Field
+screen.Post_DOF.comment = Blurs the screen at points considered out of focus
+
+option.Post_TA = Temporal Accumulation
+option.Post_TA.comment = Max number of frames we accumulate. §cHigh §5TA§c can lead to ghosting artifacts
+value.Post_TA.1 = §cOff
+
+option.Post_Renderscale = Upscale
+option.Post_Renderscale.comment = Render the screen at a lower resolution and upscale
+value.Post_Renderscale.0.5 = 4x
+value.Post_Renderscale.0.577 = 3x
+value.Post_Renderscale.0.707 = 2x
+value.Post_Renderscale.0.816 = 1.5x
+value.Post_Renderscale.1.0 = §7Off
+
+    #- Denoising -#
+    screen.Post_Denoising_Volumes = Volumes
+    screen.Post_Denoising_Volumes.comment = Includes atmosphere, water, and lava
+
+    option.Post_Denoising_Volumes = Volume Denoising
+    option.Post_Denoising_Volumes.comment = Denoise initial volume lighting
+
+        #- Volume Denoising -#
+        option.Post_Denoising_Volumes_Radius = Sample Radius
+
+        option.Post_Denoising_Volumes_Samples = Sample Count
+
+    #- Depth of Field -#
+    option.Post_DOF = Depth of Field
+    option.Post_DOF.comment = Blurs the screen at points considered out of focus
+
+    option.Post_DOF_Strength = Strength
+    option.Post_DOF_Strength.comment = How strongly we blur the out of focus areas
+    value.Post_DOF_Strength.0.1 = 10%
+    value.Post_DOF_Strength.0.2 = 20%
+    value.Post_DOF_Strength.0.3 = 30%
+    value.Post_DOF_Strength.0.4 = 40%
+    value.Post_DOF_Strength.0.5 = 50%
+    value.Post_DOF_Strength.0.6 = 60%
+    value.Post_DOF_Strength.0.7 = 70%
+    value.Post_DOF_Strength.0.8 = 80%
+    value.Post_DOF_Strength.0.9 = 90%
+    value.Post_DOF_Strength.1.0 = 100%
+
+    option.Post_DOF_Samples = Samples
+    option.Post_DOF_Samples.comment = How many points we sample for blurring
+
+#-- Meshing --#
+screen.Meshing.comment = How the shader meshes the world
+screen.Meshing_Voxels = Voxelization
+
+    #-- Voxels --#
+    option.Meshing_Voxels_AreaExp = Distance
+    option.Meshing_Voxels_AreaExp.comment = How big of an area we voxelize
+    value.Meshing_Voxels_AreaExp.6 = 2 Chunks
+    value.Meshing_Voxels_AreaExp.7 = 4 Chunks
+    value.Meshing_Voxels_AreaExp.8 = 8 Chunks
+
+#-- Materials --#
+screen.Materials.comment = Settings that affect how textures are rendered
+
+screen.Materials_POM = Parallax Occlusion Mapping
+screen.Materials_POM.comment = Adds depth to flat surfaces using a heightmap
+
+option.Materials_Emission = Emission Strength
+option.Materials_Emission.comment = How bright emissive textures render
+
+option.Materials_NormalStrength = Normal Map Strength
+option.Materials_NormalStrength.comment = How strongly normal maps affect a surface
+
+    #- Parallax Occlusion Mapping -#
+    option.Materials_POM = Parallax Occlusion Mapping
+    option.Materials_POM.comment = Adds depth to flat surfaces using a heightmap
+
+    option.Materials_POM_Distance = Render Distance
+    option.Materials_POM_Distance.comment = How far away we care about rendering POM
+
+    option.Materials_POM_Depth = Depth
+    option.Materials_POM_Depth.comment = How deep the lowest point on a heightmap should go into a block
+    suffix.Materials_POM_Depth = m
+
+    option.Materials_POM_Samples = Samples
+    option.Materials_POM_Samples.comment = How many times §7(at most)§f the heightmap will be sampled
+
+#-- Lighting --#
+
+#-- Atmosphere --#
+screen.Atmosphere.comment = Changes how the sky, sun, moon, end flash, and atmosphere are rendered.
+
+screen.Atmosphere_Sun = Sun
+screen.Atmosphere_Moon = Moon
+screen.Atmosphere_End_Flash = End Flash
+screen.Atmosphere_Volumes = Volumes
+
+option.Atmosphere_SunPathRotation = Sun Path Rotation
+option.Atmosphere_SunPathRotation.comment = Adjusts the angle of the sun and moon
+
+    #- Sun -#
+    option.Atmosphere_Sun_Tempurature = Tempurature
+    option.Atmosphere_Sun_Tempurature.comment = Affects the color of the sun (Red -> White -> Cyan)
+    
+    option.Atmosphere_Sun_Brightness = Brightness
+
+    option.Atmosphere_Sun_Penumbra = Penumbra
+    option.Atmosphere_Sun_Penumbra.comment = Affects the sharpness of sun shadows. 1 is actual minecraft size
+
+    #- Moon -#
+    option.Atmosphere_Moon_Tempurature = Tempurature
+    option.Atmosphere_Moon_Tempurature.comment = Affects the color of the moon (Red -> White -> Cyan)
+
+    option.Atmosphere_Moon_Brightness = Brightness
+
+    option.Atmosphere_Moon_Penumbra = Penumbra
+    option.Atmosphere_Moon_Penumbra.comment = Affects the sharpness of Moon shadows. 1 is actual minecraft size
+
+    #- End Flash -#
+    option.Atmosphere_EndFlash_Brightness = Brightness
+
+    option.Atmosphere_EndFlash_Penumbra = Penumbra
+    option.Atmosphere_EndFlash_Penumbra.comment = Affects the sharpness of End Flash shadows. 1 is actual minecraft size
+
+    #- Volumes -#
+    option.Atmosphere_Volumes_Threshold = Probability Threshold
+    option.Atmosphere_Volumes_Threshold.comment = The lowest probability of light passing through that will be considered
+    value.Atmosphere_Volumes_Threshold.0.05 = 5%
+    value.Atmosphere_Volumes_Threshold.0.075 = 7.5%
+    value.Atmosphere_Volumes_Threshold.0.1 = 10%
+    value.Atmosphere_Volumes_Threshold.0.125 = 12.5%
+    value.Atmosphere_Volumes_Threshold.0.15 = 15%
+
+    option.Atmosphere_Volumes_FogDensity = Fog Density
+    option.Atmosphere_Volumes_FogDensity.comment = Multiplier to default densities
+    suffix.Atmosphere_Volumes_FogDensity = x
+
+#-- Camera --#
+screen.Camera.comment = Affects how the virtual camera receives light
+
+option.Camera_Gamma = Gamma
+option.Camera_Gamma.comment = The gamma curve for light absorption
+
+#-- Test Features --#
+screen.TestFeatures = Test Features
+screen.TestFeatures.comment = Toggle unfinished / unpolished features
+
+option.POMAffectsDepth = Physical POM
+option.POMAffectsDepth.comment = Texture depth affects real-world position of fragments
